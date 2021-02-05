@@ -1,0 +1,66 @@
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+}
+*{
+    font-weight: 400;
+    font-family: 'Roboto' sans-serif;
+}
+.left-side{
+    background-color: #6C63FF;
+    width: 40%;
+    color: black;
+    font-size: 32px;
+}
+
+.right-side{
+    background-color: white;
+}
+
+.section{
+    display: inline-block;
+    width: 280px;
+    margin-top: 180px;
+    margin-left: 100px;
+}
+.label{
+   font-size: 16px;
+   font-weight: 400;
+}
+.username , .password{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-color: #6C63FF;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.forgot{
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.forgot:hover{
+    color:green;
+}
+.reset , .login{
+    display:inline-block;
+    background-color: #6C63FF;
+    border-radius: 8px ;
+    padding: 8px 20px;
+    align-items: center;
+    margin: 15px 10px;
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px 5px rgba(211, 211, 211, 0.644);
+}

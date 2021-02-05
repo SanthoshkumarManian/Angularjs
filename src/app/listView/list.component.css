@@ -1,0 +1,11 @@
+table{
+    width: 80%;
+    margin:auto;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.button{
+      margin-left: 10px;
+  }

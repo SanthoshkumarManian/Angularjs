@@ -1,0 +1,128 @@
+
+<mat-card>
+    <form [formGroup]="userForm" (ngSubmit)="onAddPost()" method="post" enctype="multipart/form-data">
+        <!-- <div class="container">
+            <img class="circle-images" src="">
+            <input type="file" accept="image/*" style="display: none;" #photo>
+            <button class="image-button" (click)="photo.click()">Select image</button>
+         </div> -->
+
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+                <input
+                matInput
+                id="name"
+                type="text"
+                name="firstName"
+                required
+                formControlName="firstName"
+                >
+        </mat-form-field>
+
+        <mat-form-field>
+
+            <mat-label>Last Name</mat-label>
+                <input
+                matInput
+                type="text"
+                name="lastName"
+                required
+                formControlName="lastName"
+               
+                >
+        </mat-form-field>
+
+        <mat-form-field>
+
+            <mat-label>Mobile Number</mat-label>
+                <input
+                matInput
+                type="tel"
+                name="mobilenumber"
+                pattern="^([0]|\+91)?[789]\d{9}$" 
+              
+                formControlName="mobileNumber"
+                required
+            
+                >
+                <mat-error>Enter valid number or add before (+91 or 0)</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+
+            <mat-label>Date Of Birth</mat-label>
+                <input
+                matInput
+                type="date"
+                name="dateOfBirth"
+                formControlName="dateOfBirth"
+                required
+                >
+        </mat-form-field>
+
+        <mat-form-field >
+            <mat-label  >Email</mat-label>
+            <input 
+            matInput 
+            type="email" 
+            name="email"
+            formControlName="email"
+            pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+               required
+                       >
+            <mat-error>please provide a valid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input 
+            matInput 
+            [type]="hide ? 'password' : 'text'"
+            name="password" 
+            minlength="8"
+            maxlength="16"
+           
+            formControlName="password"
+            required
+    
+            ><mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-error>please provide valid password 6 to 12 character</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input 
+            matInput 
+            type="password"
+            name="confirmpassword" 
+            formControlName="confirmPassword"
+            required
+            >
+            <mat-error>password is mismatch</mat-error>
+        </mat-form-field>
+
+        <div>
+            <input type="file" 
+            accept="image/*"
+            name="photo"
+            required
+            formControlName="photo"
+            (change)="selectImage($event)"
+            ><input>
+            </div>
+       
+        
+        <button mat-raised-button
+        color="primary"
+        class="reset"
+        type="reset"
+        >clear</button>
+        <button mat-raised-button
+        color="primary"
+        class="signup"
+        type="submit"
+        >{{ editMode ? 'Update' : 'Register'}}</button>
+     
+    </form>
+
+</mat-card>

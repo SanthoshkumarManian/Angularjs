@@ -1,0 +1,47 @@
+<mat-toolbar color="primary" >
+  <span>My Application</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button  (click)="goToAddUser()" class="example-icon" aria-label="Example icon-button with add person icon">
+    <mat-icon>personadd_icon</mat-icon>
+  </button>
+</mat-toolbar>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+         
+    <!-- Position Column -->
+    <ng-container matColumnDef="FirstName" >
+      <th mat-header-cell *matHeaderCellDef> FirstName. </th> 
+      <td mat-cell *matCellDef="let element" > {{element.firstName}}</td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="LastName">
+      <th mat-header-cell *matHeaderCellDef> Last Name </th>
+      <td mat-cell *matCellDef="let element">   {{element.lastName}}</td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="MobileNumber">
+      <th mat-header-cell *matHeaderCellDef> Mobile No </th>
+      <td mat-cell *matCellDef="let element">  {{element.mobileNumber}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell *matHeaderCellDef> Email</th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>   
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-raised-button  (click)="onUpdate(element._id)">Edit</button> 
+        <button mat-raised-button  (click)="onDelete(element._id)"class="button">Delete</button> 
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+  </table>
+  <mat-paginator [pageSizeOptions]="[2, 5, 10]" showFirstLastButtons></mat-paginator>

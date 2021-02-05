@@ -1,0 +1,28 @@
+mat-form-field{
+    width: 100%;
+    margin-top: 15px;
+}
+mat-card{
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+.reset ,.signup{
+    display:inline-block;
+    align-items: center;
+    margin: 15px 10px;
+}
+.container{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aquamarine;
+}
+
+.image-button{
+      margin-top:80px;
+      margin-left: 5px;
+      align-items: center;
+      vertical-align: middle;
+}

@@ -4,10 +4,10 @@ import {Form} from './form/form.component';
 import { Login } from './login/login.component';
 import {ListView} from './listView/list.component';
 const routes: Routes = [
-  {path:"" ,component:Form},
+  {path:"addUser" ,component:Form},
   {path:"login",component:Login},
-  {path : "list" , component:ListView},
-  {path:"editUser/:id",component:Form}
+  {path : "" , component:ListView},
+  {path:"addUser/:id",component:Form}
 ];
 
 @NgModule({

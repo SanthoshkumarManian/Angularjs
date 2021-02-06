@@ -59,11 +59,11 @@ export class Form {
                 this.getFormData();
                 console.log(this.formData)
                 this.formService.createUser(this.formData);
-                this.router.navigate(['/list']);
+                this.router.navigate(['']);
             } else {
                 this.getFormData();
                 this.formService.updateUser(this.id, this.formData);
-                this.router.navigate(['/list']);
+                this.router.navigate(['']);
             }
         }
     }

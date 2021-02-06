@@ -6,7 +6,7 @@ import {ListView} from './listView/list.component';
 const routes: Routes = [
   {path:"addUser" ,component:Form},
   {path:"login",component:Login},
-  {path : "" , component:ListView},
+  {path :"" , component:ListView},
   {path:"addUser/:id",component:Form}
 ];
 

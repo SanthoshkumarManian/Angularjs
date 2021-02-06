@@ -78,10 +78,10 @@ export class ListView implements OnInit {
   }
 
   goToAddUser() {
-    this.router.navigate([""]);
+    this.router.navigate(["/addUser"]);
   }
 
   onUpdate(userId: string) {
-    this.router.navigate(['editUser/', userId])
+    this.router.navigate(['addUser/', userId])
   }
 }
